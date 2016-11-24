@@ -1,0 +1,396 @@
+body{
+	font-family: $font-base;
+    background: $white;
+    color: $blue-dark;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.46;
+}
+
+html {
+  height: 100%;
+}
+
+
+a{
+	text-decoration: none;
+	color: $white;
+
+	&:hover{
+		color: $acento;
+	}
+}
+
+.left{
+	float: left;
+}
+
+#the-wrapper{
+	min-height:100%;
+	position:relative;
+	overflow: hidden;
+	z-index: 10;
+}
+
+.row{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.responsive-image{
+	width: 100%;
+}
+.super-image{
+	padding: 20px 0;
+}
+.float-right{
+	float: right;
+}
+.text-centered{
+	text-align: center;
+}
+/*****************
+	header
+
+******************/
+.aeromexico-logo{
+	width: 50px;
+	display: block;
+	padding: 10px;
+	float: left;
+	img{
+		width: 100%;
+	}
+}
+header{
+	width: 100%;
+	position: relative;
+	min-height: 50px;
+	background: $blue-dark;
+	clear: both;
+	overflow: hidden;
+	@include bp-small {
+		background: $blue-dark;
+    }
+    .languages{
+    	width: 80px;
+    	position: absolute;
+    	top: 1px;
+    	right: 2px;
+    	li{
+    		display: inline-block;
+    		border-top: 3px solid $blue-dark;
+    		font-size: 18px;
+    		a{
+    			font-family: $font-thin;
+    			&:hover{
+    				text-decoration: none;
+    			}
+    		}
+    	}
+    	li.active{
+			border-color: $acento;
+    	}
+    	@include bp-small {
+    		position: relative;
+    		margin: 0 auto;
+    		width: 66px;
+    		li{
+    			font-size: 13px;
+    		}
+   		}
+    }
+}
+
+.eyecatcher{
+	background: url(../../images/main.jpg) no-repeat top center / 100% auto;
+	@media only screen and (min-width : 900px) {
+		min-height: 600px;
+	}
+}
+
+small{
+	font-size: 70%;
+}
+
+.menu{
+	height: 76px;
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+	ul{
+		position: relative;
+	
+	}
+	li{
+		display: block;
+		float: left;
+		width: 25%;
+		height: 40px;
+		line-height: 35px;
+		a{
+			display: block;
+			width: 100%;
+			line-height: 35px;
+			text-align: center;
+			font-family: $font-regular;
+			&:hover{
+				text-decoration: none;
+				color: $white;
+			}
+		}
+	}
+}
+
+
+.logo{
+		position: relative;
+		margin: 0px auto 0;
+		display: block;
+		max-width:400px;
+		img{
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+		@media screen and (min-width:300px) and (max-width: 800px){
+		 max-width:290px;
+		}
+
+		 @include bp-small {
+		 //	width: 300px;
+		 //	padding-top: 10px;
+		 }
+}
+
+nav{
+	float: right;
+	padding-right: 20px;
+	max-width: 500px;
+	height: 50px;
+	a{
+		line-height: 50px;
+		text-transform: uppercase;
+		padding: 0 0 0 40px;
+		display: block;
+		float: left;
+		font-size: 12px;
+		font-family: $font-medium;
+		&:hover{
+			color: $white;
+		}
+	}
+}
+
+footer{
+	padding: 50px 0 35px;
+	p{
+		font-size: 0.8rem;
+	}
+	a{
+		color: $base;
+	}
+}
+/*******************************************
+		social
+
+**********************************************/
+
+.social{
+	float: left;
+	padding-top: 5px;
+	li{
+		display: block;
+		float: left;
+		img{
+			width: 55px;
+		}
+	}
+}
+
+/*******************************************
+		menu mobile
+
+**********************************************/
+
+
+
+/****************
+user
+
+***********************************************/
+
+
+.item-centered{
+	display: block;
+	margin: 0 auto;
+	float: none;
+}
+
+/*****************************
+
+		TEXTOS
+
+******************************/
+
+.main-title{
+	margin: 10px 0;
+	text-align: center;
+	font-family: $font-thin;
+	span{
+		color: $acento;
+	}
+}
+
+.text-centered{
+	text-align: center;
+}
+
+p{
+	@include bp-small {
+      font-size: 13px;
+    }
+}
+
+h1{
+	font-size: 46px;
+	font-family: $font-medium;
+	padding: 10px 5px;
+	line-height: 110%;
+	color: $blue-dark;
+	@include bp-small {
+      font-size: 22px;
+    }
+}
+
+h2{
+	font-size: 21px;
+	font-family: $font-thin;
+	@include bp-small {
+      font-size: 15px;
+    }
+}
+
+h3{
+	font-size: 16px;
+	@include bp-small {
+      font-size: 14px;
+    }
+	
+}
+
+h4{
+	font-size: 18px;
+	@include bp-small {
+      font-size: 15px;
+    }
+}
+/*****************************
+
+		Modal
+******************************/
+
+.modal-content{
+	//background: $blue-dark;
+	max-width: 500px;
+	margin: 0 auto;
+	.modal-title{
+		text-align: center;
+	}
+	.modal-body{
+		font-size: 80%;
+	}
+}
+.modal-backdrop.in {
+//	opacity: 0.9;
+}
+.modal-terminos-txt{
+	ul{
+		padding-left: 25px;
+	}
+	p{
+		padding-bottom: 7px;
+		strong{
+			font-family: $font-medium;
+		}
+	}
+
+}
+#closebt-container{
+	margin-top: 40px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.closebt{
+	cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+.closebt:hover {
+    transform: rotate(90deg);
+}
+
+/*****************************
+
+		footer
+
+******************************/
+#mainFooter{
+
+}
+
+
+/*****************************
+
+		extras
+
+******************************/
+
+.hide{
+	display: none;
+
+}
+
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  iframe, object, embed, video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/* Preloader */
+#preloader {
+	position: relative;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	//background-color:#fff; /* change if the mask should be a color other than white */
+	z-index:99; /* makes sure it stays on top */
+	padding-top: 50px;
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally on the screen */
+	top:50%; /* centers the loading animation vertically on the screen */
+	background-image:url(../../images/status.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
